@@ -1,0 +1,127 @@
+
+
+:root{
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+
+
+.main_div{
+  display: flex;
+  position: absolute;
+  min-height: 80dvh;
+  top:0;
+  left: 105px;
+  transition: all 0.5s ease;
+  width:  calc(100%-80px);
+  padding: 1rem;
+  gap: 7dvh;
+}
+
+.line{
+  display: flex;
+  position: absolute;
+  left: 800px;
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+}
+
+.line.purple{
+  right: 0%;
+  top: 0%;
+  animation: rotate-purple 1s linear infinite;
+  border-bottom: 3px solid#535bf2;
+  box-shadow: 0px 4px 10px 1px rgba(171, 46, 230, 0.1);
+}
+
+.line.blue{
+  right: 0%;
+  top: 0%;
+  animation: rotate-blue 1s linear infinite;
+  border-bottom: 3px solid#1828bb;
+  box-shadow: 0px 4px 10px 1px rgba(82, 65, 243, 0.1);
+}
+
+.line.red{
+  right: 0%;
+  top: 0%;
+  animation: rotate-red 1s linear infinite;
+  border-bottom: 3px solid#a72b45;
+  box-shadow: 0px 4px 10px 1px rgba(218, 56, 56, 0.1);
+}
+
+
+@keyframes rotate-purple{
+
+  0%{
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+  100%{
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    filter: hue-rotate(90deg);
+
+  }
+}
+
+@keyframes rotate-blue{
+
+  0%{
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+  100%{
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    filter: hue-rotate(90deg);
+
+  }
+}
+
+@keyframes rotate-red{
+
+  0%{
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  100%{
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    filter: hue-rotate(90deg);
+  }
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

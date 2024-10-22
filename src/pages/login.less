@@ -1,0 +1,70 @@
+.login_div{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    border:none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+    width: 250px;
+    box-sizing: border-box;
+    margin-bottom: 2dvh;
+    min-width: fit-content;
+    line-height: 1.5;
+    transition: all 2s;
+}
+
+button {
+    border-radius: 8px;
+    place-items: center;
+    display: grid;
+    border: 1px solid transparent;
+    padding: 1dvh 3dvh;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    width: 100px;
+    height: 50px;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+button:hover{
+  background-color: #383838;
+  transition: background-color 1s;
+}
+
+button::before{
+    position: absolute;
+    content: '';
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 1dvh 3dvh;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    width: 100px;
+    height: 50px;
+    background-color: #3f3b3f;
+    cursor: pointer;
+    z-index: -1;
+    transition: border-color 0.25s;
+}
+
+  @keyframes button-color{
+    50%{
+        filter: hue-rotate(60deg);
+    }
+  }
+  
+  button:focus, button:focus-visible {
+    background-color: #c0bec0;
+    color:#292727;
+
+  }
